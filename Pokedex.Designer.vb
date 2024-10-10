@@ -33,6 +33,7 @@ Partial Class Pokedex
         lbl_SpDefence = New Label()
         lbl_Speed = New Label()
         panel_Stats = New Panel()
+        lbl_Generation = New Label()
         lbl_CatchRate = New Label()
         PictureBox1 = New PictureBox()
         pic_Type1 = New PictureBox()
@@ -40,7 +41,6 @@ Partial Class Pokedex
         lbl_Height = New Label()
         lbl_Weight = New Label()
         DataGridView1 = New DataGridView()
-        lbl_Generation = New Label()
         CType(pic_Pokemon, ComponentModel.ISupportInitialize).BeginInit()
         panel_Stats.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -50,90 +50,102 @@ Partial Class Pokedex
         ' 
         ' cmb_Search
         ' 
+        cmb_Search.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        cmb_Search.AutoCompleteSource = AutoCompleteSource.ListItems
         cmb_Search.FormattingEnabled = True
-        cmb_Search.Location = New Point(12, 12)
+        cmb_Search.Location = New Point(8, 7)
+        cmb_Search.Margin = New Padding(2)
         cmb_Search.Name = "cmb_Search"
-        cmb_Search.RightToLeft = RightToLeft.Yes
-        cmb_Search.Size = New Size(644, 33)
+        cmb_Search.RightToLeft = RightToLeft.No
+        cmb_Search.Size = New Size(452, 23)
         cmb_Search.TabIndex = 0
         cmb_Search.Text = "Search..."
         ' 
         ' btn_Search
         ' 
-        btn_Search.Location = New Point(662, 12)
+        btn_Search.Location = New Point(463, 7)
+        btn_Search.Margin = New Padding(2)
         btn_Search.Name = "btn_Search"
-        btn_Search.Size = New Size(224, 33)
+        btn_Search.Size = New Size(157, 20)
         btn_Search.TabIndex = 1
         btn_Search.Text = "Go!"
         btn_Search.UseVisualStyleBackColor = True
         ' 
         ' pic_Pokemon
         ' 
-        pic_Pokemon.Location = New Point(12, 51)
+        pic_Pokemon.Location = New Point(8, 31)
+        pic_Pokemon.Margin = New Padding(2)
         pic_Pokemon.Name = "pic_Pokemon"
-        pic_Pokemon.Size = New Size(519, 379)
+        pic_Pokemon.Size = New Size(363, 227)
         pic_Pokemon.TabIndex = 2
         pic_Pokemon.TabStop = False
         ' 
         ' rtxt_Description
         ' 
-        rtxt_Description.Location = New Point(12, 436)
+        rtxt_Description.Location = New Point(8, 262)
+        rtxt_Description.Margin = New Padding(2)
         rtxt_Description.Name = "rtxt_Description"
-        rtxt_Description.Size = New Size(519, 192)
+        rtxt_Description.Size = New Size(364, 117)
         rtxt_Description.TabIndex = 4
         rtxt_Description.Text = ""
         ' 
         ' lbl_HP
         ' 
         lbl_HP.AutoSize = True
-        lbl_HP.Location = New Point(3, 229)
+        lbl_HP.Location = New Point(2, 137)
+        lbl_HP.Margin = New Padding(2, 0, 2, 0)
         lbl_HP.Name = "lbl_HP"
-        lbl_HP.Size = New Size(35, 25)
+        lbl_HP.Size = New Size(23, 15)
         lbl_HP.TabIndex = 5
         lbl_HP.Text = "HP"
         ' 
         ' lbl_Attack
         ' 
         lbl_Attack.AutoSize = True
-        lbl_Attack.Location = New Point(3, 254)
+        lbl_Attack.Location = New Point(2, 152)
+        lbl_Attack.Margin = New Padding(2, 0, 2, 0)
         lbl_Attack.Name = "lbl_Attack"
-        lbl_Attack.Size = New Size(62, 25)
+        lbl_Attack.Size = New Size(41, 15)
         lbl_Attack.TabIndex = 6
         lbl_Attack.Text = "Attack"
         ' 
         ' lbl_Defence
         ' 
         lbl_Defence.AutoSize = True
-        lbl_Defence.Location = New Point(3, 279)
+        lbl_Defence.Location = New Point(2, 167)
+        lbl_Defence.Margin = New Padding(2, 0, 2, 0)
         lbl_Defence.Name = "lbl_Defence"
-        lbl_Defence.Size = New Size(76, 25)
+        lbl_Defence.Size = New Size(50, 15)
         lbl_Defence.TabIndex = 7
         lbl_Defence.Text = "Defence"
         ' 
         ' lbl_SpAttack
         ' 
         lbl_SpAttack.AutoSize = True
-        lbl_SpAttack.Location = New Point(3, 304)
+        lbl_SpAttack.Location = New Point(2, 182)
+        lbl_SpAttack.Margin = New Padding(2, 0, 2, 0)
         lbl_SpAttack.Name = "lbl_SpAttack"
-        lbl_SpAttack.Size = New Size(92, 25)
+        lbl_SpAttack.Size = New Size(60, 15)
         lbl_SpAttack.TabIndex = 8
         lbl_SpAttack.Text = "Sp. Attack"
         ' 
         ' lbl_SpDefence
         ' 
         lbl_SpDefence.AutoSize = True
-        lbl_SpDefence.Location = New Point(3, 329)
+        lbl_SpDefence.Location = New Point(2, 197)
+        lbl_SpDefence.Margin = New Padding(2, 0, 2, 0)
         lbl_SpDefence.Name = "lbl_SpDefence"
-        lbl_SpDefence.Size = New Size(106, 25)
+        lbl_SpDefence.Size = New Size(69, 15)
         lbl_SpDefence.TabIndex = 9
         lbl_SpDefence.Text = "Sp. Defence"
         ' 
         ' lbl_Speed
         ' 
         lbl_Speed.AutoSize = True
-        lbl_Speed.Location = New Point(3, 354)
+        lbl_Speed.Location = New Point(2, 212)
+        lbl_Speed.Margin = New Padding(2, 0, 2, 0)
         lbl_Speed.Name = "lbl_Speed"
-        lbl_Speed.Size = New Size(62, 25)
+        lbl_Speed.Size = New Size(39, 15)
         lbl_Speed.TabIndex = 10
         lbl_Speed.Text = "Speed"
         ' 
@@ -154,60 +166,77 @@ Partial Class Pokedex
         panel_Stats.Controls.Add(lbl_Speed)
         panel_Stats.Controls.Add(DataGridView1)
         panel_Stats.Enabled = False
-        panel_Stats.Location = New Point(537, 51)
+        panel_Stats.Location = New Point(376, 31)
+        panel_Stats.Margin = New Padding(2)
         panel_Stats.Name = "panel_Stats"
-        panel_Stats.Size = New Size(349, 379)
+        panel_Stats.Size = New Size(244, 227)
         panel_Stats.TabIndex = 11
+        ' 
+        ' lbl_Generation
+        ' 
+        lbl_Generation.AutoSize = True
+        lbl_Generation.Location = New Point(2, 60)
+        lbl_Generation.Margin = New Padding(2, 0, 2, 0)
+        lbl_Generation.Name = "lbl_Generation"
+        lbl_Generation.Size = New Size(65, 15)
+        lbl_Generation.TabIndex = 20
+        lbl_Generation.Text = "Generation"
         ' 
         ' lbl_CatchRate
         ' 
         lbl_CatchRate.AutoSize = True
-        lbl_CatchRate.Location = New Point(3, 200)
+        lbl_CatchRate.Location = New Point(2, 120)
+        lbl_CatchRate.Margin = New Padding(2, 0, 2, 0)
         lbl_CatchRate.Name = "lbl_CatchRate"
-        lbl_CatchRate.Size = New Size(96, 25)
+        lbl_CatchRate.Size = New Size(64, 15)
         lbl_CatchRate.TabIndex = 19
         lbl_CatchRate.Text = "Catch Rate"
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(3, 52)
+        PictureBox1.Location = New Point(-1, 32)
+        PictureBox1.Margin = New Padding(2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(342, 46)
+        PictureBox1.Size = New Size(239, 28)
         PictureBox1.TabIndex = 18
         PictureBox1.TabStop = False
         ' 
         ' pic_Type1
         ' 
-        pic_Type1.Location = New Point(3, 0)
+        pic_Type1.Location = New Point(2, 0)
+        pic_Type1.Margin = New Padding(2)
         pic_Type1.Name = "pic_Type1"
-        pic_Type1.Size = New Size(342, 46)
+        pic_Type1.Size = New Size(239, 28)
         pic_Type1.TabIndex = 17
         pic_Type1.TabStop = False
         ' 
         ' lbl_Class
         ' 
         lbl_Class.AutoSize = True
-        lbl_Class.Location = New Point(3, 125)
+        lbl_Class.Location = New Point(2, 75)
+        lbl_Class.Margin = New Padding(2, 0, 2, 0)
         lbl_Class.Name = "lbl_Class"
-        lbl_Class.Size = New Size(114, 25)
+        lbl_Class.Size = New Size(77, 15)
         lbl_Class.TabIndex = 16
         lbl_Class.Text = "Classification"
         ' 
         ' lbl_Height
         ' 
         lbl_Height.AutoSize = True
-        lbl_Height.Location = New Point(3, 150)
+        lbl_Height.Location = New Point(2, 90)
+        lbl_Height.Margin = New Padding(2, 0, 2, 0)
         lbl_Height.Name = "lbl_Height"
-        lbl_Height.Size = New Size(65, 25)
+        lbl_Height.Size = New Size(43, 15)
         lbl_Height.TabIndex = 15
         lbl_Height.Text = "Height"
         ' 
         ' lbl_Weight
         ' 
         lbl_Weight.AutoSize = True
-        lbl_Weight.Location = New Point(3, 175)
+        lbl_Weight.Location = New Point(2, 105)
+        lbl_Weight.Margin = New Padding(2, 0, 2, 0)
         lbl_Weight.Name = "lbl_Weight"
-        lbl_Weight.Size = New Size(68, 25)
+        lbl_Weight.Size = New Size(45, 15)
         lbl_Weight.TabIndex = 14
         lbl_Weight.Text = "Weight"
         ' 
@@ -216,32 +245,25 @@ Partial Class Pokedex
         DataGridView1.BackgroundColor = SystemColors.ControlLight
         DataGridView1.BorderStyle = BorderStyle.None
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(112, 229)
+        DataGridView1.Location = New Point(78, 137)
+        DataGridView1.Margin = New Padding(2)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 62
-        DataGridView1.Size = New Size(237, 150)
+        DataGridView1.Size = New Size(166, 90)
         DataGridView1.TabIndex = 13
-        ' 
-        ' lbl_Generation
-        ' 
-        lbl_Generation.AutoSize = True
-        lbl_Generation.Location = New Point(3, 100)
-        lbl_Generation.Name = "lbl_Generation"
-        lbl_Generation.Size = New Size(98, 25)
-        lbl_Generation.TabIndex = 20
-        lbl_Generation.Text = "Generation"
         ' 
         ' Pokedex
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(894, 640)
+        ClientSize = New Size(626, 384)
         Controls.Add(rtxt_Description)
         Controls.Add(pic_Pokemon)
         Controls.Add(btn_Search)
         Controls.Add(cmb_Search)
         Controls.Add(panel_Stats)
         FormBorderStyle = FormBorderStyle.Fixed3D
+        Margin = New Padding(2)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Pokedex"
