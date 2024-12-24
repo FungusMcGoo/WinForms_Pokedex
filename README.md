@@ -1,5 +1,9 @@
 A simple Pokedex app with SQL server connectivity, coded in Visualbasic.
 
 Pokedex must be connected to a database or localdb, the code and parameters are simple enough to switch out with your own.
+Final repo will include: db file, image folder, and vb.net code for the pokedex.
 
-Once the database has been finalised I will export it to .csv and add to the repo so it can easily be imported into your SQL. Currently I am unsure of commiting a database to Github so this seems like an easy compromise.
+
+Data sources: https://www.kaggle.com/datasets/rounakbanik/pokemon, https://www.kaggle.com/datasets/rounakbanik/pokemon
+
+Unsure of where to find descriptions of all pokemon so Im researching a possible solution to either scrape descriptions from Bulbapedia / Serebii. Ive also just found out about PokeAPI as Im typing this.
